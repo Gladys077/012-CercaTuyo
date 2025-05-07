@@ -1,0 +1,68 @@
+/* base */
+.btn {
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    max-width: 400px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+}
+
+
+
+/* alturas */
+.form {
+    height: 48px;
+}
+
+.section {
+    height: 40px;
+}
+
+/* variantes */
+.primary {
+    color: var(--color-btn-primary);
+}
+
+.secondary {
+    background-color: var(--background-btn-secondary);
+    color: var(--color-btn-secondary);
+}
+
+/* colores por sección (common: púrpura - buyer: azul - seller: naranja*/
+.common.primary {
+    background-color: var(--background-btn-primary-common);
+}
+
+.buyer.primary {
+    background-color: var(--background-btn-primary-buyer);
+}
+
+.seller.primary {
+    background-color: var(--background-btn-primary-seller);
+}
+
+/* anchos */
+.full {
+    width: 100%;
+}
+
+.half {
+    width: calc(50% - 8px); /* 8px es el margen entre botones */
+}
+
+/* btn-deshabilitado */
+button:disabled, .btn:disabled {
+    background-color: var(--background-btn-secondary);
+    color: var(--color-btn-secondary);
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* para PC */
+.btn.full {
+    max-width: 400px;
+    margin: 0 auto;
+}
