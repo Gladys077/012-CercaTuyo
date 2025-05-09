@@ -1,7 +1,24 @@
+:root{
+  --color-btn-primary: #FFFFFF;
+  --background-btn-secondary: #DADBDC;
+  --color-btn-secondary: #374151;
+  --border-bottom-btn-secondary: #a7a7a7;
+  --background-btn-primary-common: #5A32EA;
+  --background-btn-primary-buyer: #3B49F8;
+  --background-btn-primary-seller: #EA580C;
+
+  font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 16px;
   text-align: center;
 }
-
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}

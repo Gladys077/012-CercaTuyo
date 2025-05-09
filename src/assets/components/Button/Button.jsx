@@ -1,22 +1,24 @@
-import React from "react"
-import styles from"./Button.module.css" //Usemos module.css para que no haya conflictos de estilos entre componentes
+import styles from"./Button.module.css" //Uso *.module.css para que no haya conflictos de estilos entre componentes
 
 function Button({
     children, // texto del botón
-    variant = "primary", // variante del botón (primary o secondary)
-    section = "common", // sección del botón (common, buyer o seller)
-    size = "form", // tamaño del botón (form o section)
-    fullWidth = true, // true = 'full' | false = 'half' -> ancho completo o no
-    disabled = false, // deshabilitado o no
-    type = "button", // tipo del botón (button, submit o reset)
+    variant = "primary", // variante del botón (primary, secondary, google(login))
+    section = "seller",  // sección del botón (common/púrpura, buyer/azul o seller/naranja)
+    height = "section",  // altura del botón (form o section)
+    fullWidth = false,   // true = 'full' | false = 'half' -> ancho completo o no
+    disabled = false,    // deshabilitado o no
+    type = "button",     // tipo del botón (button, submit o reset)
     onClick,
+    icon,                // icono del botón (opcional)
+    iconPosition = "left", // posición del icono (left o right)
 }) {
     const classes = [   // CLASES CSS del botón
         styles.btn,          // clase base
-        styles[variant],        // variante del botón (primary o secondary)
+        styles[variant],     // variante del botón (primary, secondary, google)
         styles[section],      
-        styles[size],
+        styles[height],
         fullWidth ? styles.full : styles.half, //si fullWidth es true, usará la clase 'full', si no, usará 'half'
+        styles[iconPosition], //si hay icono, usará la clase de la posición del icono (left o right)
     ].join(" ");
 
     return (
@@ -26,10 +28,60 @@ function Button({
             onClick={onClick}
             disabled={disabled}
         >
-            {children}            {/* texto del botón */}
+            <span className={styles.content}> {/* Contenedor del contenido del botón */}
+                {/* Renderizamos el icono a la izquierda si existe y la posición es "left" */}
+                {icon && iconPosition === "left" && <span className={styles.iconWrapper}>{icon}</span>}
+                
+                {children}       {/* Texto del botón */}
+                
+                {/* Renderizamos el icono a la derecha si existe y la posición es "right" */}
+                {icon && iconPosition === "right" && <span className={styles.iconWrapper}>{icon}</span>}
+            </span>
         </button>
     );
 }
 
 export default Button; 
 
+
+// USO: src/App.jsx
+/*
+import './App.css'
+import Button from './assets/components/Button/Button.jsx'
+import GoogleLogo from './assets/icons/fill/GoogleLogo.svg' // Importamos el logo de Google
+
+function App() {
+  return (
+    <div>
+      <h1>Probando Botón Primario/Vendedor</h1>
+
+      <Button
+        variant="google" 
+        section="common" 
+        size="form" 
+        fullWidth={true} 
+        disabled={false} 
+        type="button"
+        onClick={() => alert("google Login")}
+        icon={<img src={GoogleLogo} alt="Google Logo" />} // Usamos el logo de Google como icono
+        iconPosition='right' // Icono a la izquierda
+        >
+        Google
+      </Button>
+      <Button
+        variant="primary" 
+        section="common" 
+        size="section" 
+        fullWidth={false} 
+        disabled={false} 
+        type="button"
+        onClick={() => alert("Botón Primario Vendedor")}
+        >
+        Confirmar
+      </Button>
+    </div>
+  );
+}
+
+export default App;
+*/

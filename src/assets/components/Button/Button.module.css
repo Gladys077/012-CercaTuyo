@@ -8,9 +8,23 @@
     max-width: 400px;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
 }
+.btn:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+.btn:active {
+    transform: scale(0.9);
+}
 
-
-
+/* btn-deshabilitado */
+.btn:disabled {
+    /* background-color: var(--background-btn-secondary);
+    color: var(--color-btn-secondary); */
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+/* -----Tamaños----- */
 /* alturas */
 .form {
     height: 48px;
@@ -18,6 +32,15 @@
 
 .section {
     height: 40px;
+}
+
+/* anchos */
+.full {
+    width: 100%;
+}
+
+.half {
+    width: 50%; /* 8px es el margen entre botones */
 }
 
 /* variantes */
@@ -28,7 +51,21 @@
 .secondary {
     background-color: var(--background-btn-secondary);
     color: var(--color-btn-secondary);
+    border-bottom: .5px solid var(--border-bottom-btn-secondary);
 }
+
+/* estilos para variante para Google */
+.google {
+    background-color: white;
+    color: var(--color-btn-secondary);
+    border: 2px solid #dadce0;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+  }
+  
+.google:hover {
+    background-color: #fafafa;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  }
 
 /* colores por sección (common: púrpura - buyer: azul - seller: naranja*/
 .common.primary {
@@ -43,23 +80,28 @@
     background-color: var(--background-btn-primary-seller);
 }
 
-/* anchos */
-.full {
-    width: 100%;
-}
-
-.half {
-    width: calc(50% - 8px); /* 8px es el margen entre botones */
-}
-
-/* btn-deshabilitado */
-button:disabled, .btn:disabled {
-    background-color: var(--background-btn-secondary);
-    color: var(--color-btn-secondary);
-    opacity: 0.5;
-    cursor: not-allowed;
-    pointer-events: none;
-}
+/* Estilos si el btn tiene icono + texto */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+  
+  /* Estilo común para iconos */
+.iconWrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Estilos específicos basados en posición */
+.left {
+    flex-direction: row;
+  }
+  
+.right {
+    flex-direction: row-reverse;
+  }
 
 /* para PC */
 .btn.full {
