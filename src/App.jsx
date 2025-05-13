@@ -1,8 +1,11 @@
 import './App.css'
-import Button from './assets/components/Button/Button.jsx'
+import Button from './components/Button/Button.jsx'
 import React, { useState } from "react";
-import InputForm from './assets/components/Button/Button.jsx';
+import InputForm from './components/Button/Button.jsx';
 import GoogleLogo from './assets/icons/fill/GoogleLogo.svg'
+import { FaEye, FaEyeSlash, FaPencilAlt  } from "react-icons/fa";
+import { NavLink } from 'react-router-dom'
+import AppRouter from './routers/AppRouter.jsx'
 
 
 function App() {
@@ -25,6 +28,19 @@ function App() {
   };
 
   return (
+
+<>
+
+      <nav>
+          <NavLink to={"/"}>LogIn</NavLink>
+          <NavLink to={"/home" }>Home</NavLink>
+      </nav>
+      <AppRouter/>
+  
+
+
+
+
     <div style={{ padding: "2rem", maxWidth: "400px", margin: "auto" }}>
       <InputForm
         label="Nombre y Apellido"
@@ -77,6 +93,7 @@ function App() {
         ]}
       />
     </div>
+        </>
   );
 }
 
