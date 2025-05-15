@@ -1,5 +1,5 @@
 import Button from "../Button/Button.jsx";
-import GoogleLogo from "../../icons/fill/GoogleLogo.svg";
+import { GoogleLogo } from '@/assets/icons/GoogleLogo.svg' // Importamos el logo de Google
 
 export default function GoogleButton({ onLogin }) {
   return (

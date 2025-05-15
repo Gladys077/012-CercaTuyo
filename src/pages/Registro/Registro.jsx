@@ -1,7 +1,7 @@
 import { useState } from "react";
-import InputForm from "./InputForm.jsx"
-import Button from "../Button/Button.jsx"; 
-import { visible, invisible } from "../../icons/outline"; 
+import InputForm from "../src/components/InputForm/InputForm.jsx";
+import Button from "../src/components/Button/Button.jsx"; 
+import { Visible, Invisible } from '@/assets/icons'; 
 
 function Registro() {
   const [form, setForm] = useState({
@@ -24,8 +24,8 @@ function Registro() {
 
       {/* Avatar + ícono */}
       <div className="avatar-container">
-        <img src="/default-avatar.png" alt="avatar" />
-        <button className="edit-icon-btn">
+        <img src="/Avatar.svg" alt="Avatar" />
+        <button className="EditarPerfil">
           <i className="edit-icon" />
         </button>
       </div>
@@ -54,7 +54,7 @@ function Registro() {
         onChange={handleChange}
         placeholder="Contraseña"
         type={verPassword ? "text" : "password"}
-        icon={verPassword ? <EyeOffIcon size={20} /> : <EyeIcon size={20} />}
+        icon={verPassword ? <img src={Invisible} alt="Contraseña Invisible" /> : <img src={Visible} alt="Contraseña Visible" />}
         onClick={() => setVerPassword(!verPassword)}
       />
 
@@ -65,7 +65,7 @@ function Registro() {
         onChange={handleChange}
         placeholder="Confirmar contraseña"
         type={verConfirmar ? "text" : "password"}
-        icon={verConfirmar ? <EyeOffIcon size={20} /> : <EyeIcon size={20} />}
+        icon={verConfirmar ? <img src={Invisible} alt="Contraseña Invisible" /> : <img src={Visible} alt="Contraseña Visible" />}
         onClick={() => setVerConfirmar(!verConfirmar)}
       />
 

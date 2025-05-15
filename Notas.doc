@@ -1,0 +1,25 @@
+Manejo de Iconos, Imágenes, Emojis:
+Para evitar tener que hacer un import por icono, creé un archivo index.js con el listado de todos los iconos que están dentro de esa carpeta.
+Cada vez que se agregue uno icono nuevo o se cambie un nombre, habrá que correr:
+npm run generate:assets
+
+Así actualizará el archivo index.js 
+
+--------------------
+( Con el script: "generate-assets-index.cjs" hice que se genere la lista 'index.js' de forma automática )
+--------------------
+
+Cómo IMPORTAR LOS ICONOS dentro de nuestros componentes:
+Ejemplo:
+
+import { pago, verificacion, preparacion, en-camino, entregado} from '@/assets/icons';
+
+const MyComponent = () => (
+  <>
+    <img src={pago} alt="icono pagar" />
+    <img src={verificacion} alt="verificacion" />
+    <img src={preparacion} alt="preparacion" />
+    <img src={en-camino} alt="en-camino" />
+    <img src={entregado} alt="entregado" />
+  </>
+);

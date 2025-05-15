@@ -46,9 +46,9 @@ export default Button;
 
 // USO: src/App.jsx
 /*
+
 import './App.css'
-import Button from './assets/components/Button/Button.jsx'
-import GoogleLogo from './assets/icons/fill/GoogleLogo.svg' // Importamos el logo de Google
+import Button from '../src/components/Button/Button.jsx'
 
 function App() {
   return (
@@ -56,15 +56,14 @@ function App() {
       <h1>Probando Botón Primario/Vendedor</h1>
 
       <Button
-        variant="google" 
+        variant="secondary" 
         section="common" 
         size="form" 
         fullWidth={true} 
         disabled={false} 
         type="button"
         onClick={() => alert("google Login")}
-        icon={<img src={GoogleLogo} alt="Google Logo" />} // Usamos el logo de Google como icono
-        iconPosition='right' // Icono a la izquierda
+        iconPosition='left' // Icono a la izquierda
         >
         Google
       </Button>
@@ -84,4 +83,4 @@ function App() {
 }
 
 export default App;
-*/
+*/  

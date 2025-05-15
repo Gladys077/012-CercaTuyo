@@ -2,8 +2,7 @@ import './App.css'
 import Button from './components/Button/Button.jsx'
 import React, { useState } from "react";
 import InputForm from './components/Button/Button.jsx';
-import GoogleLogo from './assets/icons/fill/GoogleLogo.svg'
-import { FaEye, FaEyeSlash, FaPencilAlt  } from "react-icons/fa";
+import { GoogleLogo, Visible, Invisible, EditarTexto, ChevronGris} from '@/assets/icons' // Importamos los iconos
 import { NavLink } from 'react-router-dom'
 import AppRouter from './routers/AppRouter.jsx'
 
@@ -66,7 +65,7 @@ function App() {
         onChange={handleChange}
         placeholder="Tu contraseña"
         type={showPassword ? "text" : "password"}
-        icon={showPassword ? <FaEyeSlash /> : <FaEye />}
+        icon={showPassword ? <img src={Visible} alt="visible"/> : <img src={Invisible} alt="invisible" />}
         onIconClick={togglePasswordVisibility}
       />
 
@@ -76,7 +75,7 @@ function App() {
         value={formData.editable}
         onChange={handleChange}
         placeholder="Escribí algo"
-        icon={<FaPencilAlt />}
+        icon={<img src={EditarTexto} alt="editar texto" />}
       />
 
       <InputForm
@@ -98,3 +97,5 @@ function App() {
 }
 
 export default App;
+
+
