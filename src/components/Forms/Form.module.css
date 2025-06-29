@@ -1,0 +1,51 @@
+/* ejemplo de estilos base */
+.inputWrapper,
+.textarea,
+.select,
+.addWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .label {
+  font-size: 14px;
+  margin-bottom: 4px;
+} */
+
+.input,
+.textarea,
+.select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.withIcon {
+  padding-right: 36px;
+}
+
+.iconWrapper {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.addWrapper {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.addButton {
+  padding: 4px 10px;
+  font-size: 18px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}

@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.wrapper:focus {
+  outline: 2px solid var(--color-gris-oscuro);
+  outline-offset: 2px;
+}
+
+/* outline: dibuja un contorno alrededor del elemento cuando está enfocado 
+    outline-offset: Este valor separa ese contorno del borde del elemento.
+
+    Cuando el btn recibe foco(ej.tab), se muestra una línea de 2px, esa línea está separada del borde por 2px
+*/

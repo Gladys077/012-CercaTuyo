@@ -1,0 +1,13 @@
+.wrapper {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.activo {
+  background-color: #ea580c; /* ejemplo naranja seller */
+  color: white;
+}

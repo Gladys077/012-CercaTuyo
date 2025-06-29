@@ -1,0 +1,62 @@
+.header {
+  box-sizing: border-box;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: var(--header-bg);
+  color: var(--gris-oscuro); /* siempre gris oscuro por defecto */
+  font-size: 18px;
+  gap: 12px;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  min-width: 24px;
+  gap: 8px;
+}
+
+.rightContent {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+}
+
+.title {
+  flex: 1;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+/* Color dinámico sólo para íconos */
+.vendedorIcon svg,
+.compradorIcon svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+.vendedorIcon {
+  color: var(--primary-seller);
+}
+
+.compradorIcon {
+  color: var(--primary-buyer);
+}
+
+.comunIcon {
+  color: var(--gris-oscuro);
+}
+
+.demoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+  background-color: var(--background-default, #f9fafb);
+}

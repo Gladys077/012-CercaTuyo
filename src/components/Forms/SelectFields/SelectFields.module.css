@@ -1,0 +1,67 @@
+@import "@/App.css";
+
+.selectWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: var(--font-size-base);
+  margin-bottom: 4px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.select {
+  padding: var(--input-padding);
+  font-size: var(--font-size-base);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.select:focus {
+  border-color: var(--color-primary);
+}
+
+.addWrapper {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.addInput {
+  flex: 1;
+  padding: var(--input-padding);
+  font-size: var(--font-size-base);
+  border: 1px solid var(--color-border);
+  border-radius: calc(var(--radius) - 2px);
+  outline: none;
+}
+
+.addButton {
+  padding: 6px 12px;
+  font-size: var(--font-size-base);
+  border: none;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.addButton:hover {
+  background-color: #3ea244;
+}
+
+/* Ejemplo de uso:
+<SelectField
+  label="Rubro"
+  name="rubro"
+  value={formData.rubro}
+  onChange={handleChange}
+  options={rubros}
+  editable={true} // si queremos permitir agregar
+/> */

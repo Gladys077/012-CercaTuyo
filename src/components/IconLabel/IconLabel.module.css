@@ -1,0 +1,115 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  padding: 4px;
+  cursor: pointer;
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.iconContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: content-box;
+  padding: 1px;
+}
+.iconContainer svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: rgb(236, 16, 16);
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 50%;
+  border: 0.5px solid #ffffff;
+  min-width: 8px;
+  height: 16px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: scaleIn 0.6s ease-out;
+}
+
+/* Texto debajo del ícono */
+.label {
+  font-family: "Roboto", sans-serif;
+  margin-top: 4px;
+  text-align: center;
+}
+
+/* ========== VARIANTES ========== */
+
+/* Footer */
+.footer .icon {
+  width: 24px;
+  height: 24px;
+  stroke: #757575;
+}
+.footer .label {
+  font-size: 12px;
+  color: #757575;
+}
+.footer.active .icon,
+.footer.active .label {
+  stroke: #3f3f3f;
+  color: #3f3f3f;
+  fill: #3f3f3f;
+  font-weight: 500;
+}
+
+/* Menú del vendedor */
+.menuVendedor .icon {
+  width: 24px;
+  height: 24px;
+  fill: #6b7280;
+}
+.menuVendedor .label {
+  font-size: 14px;
+  color: #6b7280;
+}
+.menuVendedor.active .icon,
+.menuVendedor.active .label {
+  fill: #ea580c;
+  color: #ea580c;
+}
+
+/* Submenú "Pendientes" */
+.pendientes .icon {
+  height: 32px;
+  width: auto;
+  fill: #3f3f3f;
+}
+.pendientes .label {
+  font-size: 12px;
+  color: #3f3f3f;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}

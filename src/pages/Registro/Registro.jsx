@@ -1,7 +1,11 @@
+import './Registro.css'
 import { useState } from "react";
-import InputForm from "../src/components/InputForm/InputForm.jsx";
-import Button from "../src/components/Button/Button.jsx"; 
+import InputForm from "../../components/InputForm/InputForm.jsx";
+import Button from "../../components/Button/Button.jsx"; 
 import { Visible, Invisible } from '@/assets/icons'; 
+import { Avatar } from '@/assets/img';
+import MainLayout from '../../layouts/MainLayout';
+
 
 function Registro() {
   const [form, setForm] = useState({
@@ -19,12 +23,13 @@ function Registro() {
   };
 
   return (
+    <MainLayout layoutType="no-header">
     <main className="registro-container">
       <h1>Registro</h1>
 
       {/* Avatar + ícono */}
       <div className="avatar-container">
-        <img src="/Avatar.svg" alt="Avatar" />
+        <img src={Avatar} alt="Avatar" />
         <button className="EditarPerfil">
           <i className="edit-icon" />
         </button>
@@ -69,10 +74,15 @@ function Registro() {
         onClick={() => setVerConfirmar(!verConfirmar)}
       />
 
-      <Button onClick={() => console.log("Registrar usuario")}>
+      <Button 
+        section="common"
+        height="form"
+        fullWidth={true}
+        onClick={() => console.log("Registrar usuario")}>
         Iniciar sesión
       </Button>
     </main>
+    </MainLayout>
   );
 }
 
